@@ -312,7 +312,7 @@ CIPR <- function(input_dat,
 
   # Select relevant subsets from the reference
 
-  if(select_ref_subsets != "all"){
+  if(any(length(select_ref_subsets) > 1, all(length(select_ref_subsets) == 1, select_ref_subsets[1] != "all"))){
 
     message("Subsetting reference data")
 
